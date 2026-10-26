@@ -1,1 +1,204 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Short description of your website for search engines.">
+  <title>Your Site Name</title>
+
+  <style>
+    /* ===== Base reset ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #1f4e79;      /* main brand color */
+      --accent: #f2a900;       /* buttons / highlights */
+      --text: #222;
+      --muted: #666;
+      --bg: #ffffff;
+      --bg-alt: #f4f6f8;
+      --max-width: 1100px;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
+
+    /* ===== Header / Nav ===== */
+    header {
+      background: var(--primary);
+      color: #fff;
+      position: sticky; top: 0; z-index: 10;
+    }
+    .nav {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 16px 20px; max-width: var(--max-width); margin: 0 auto;
+    }
+    .logo { font-size: 1.4rem; font-weight: 700; color: #fff; }
+    .nav ul { list-style: none; display: flex; gap: 24px; }
+    .nav a { color: #fff; }
+
+    /* ===== Hero ===== */
+    .hero {
+      background: var(--bg-alt);
+      padding: 80px 20px;
+      text-align: center;
+    }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 16px; color: var(--primary); }
+    .hero p { font-size: 1.15rem; color: var(--muted); margin-bottom: 28px; }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #000;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+    .btn:hover { opacity: 0.9; text-decoration: none; }
+
+    /* ===== Sections ===== */
+    section { padding: 60px 0; }
+    section h2 { font-size: 1.8rem; margin-bottom: 24px; color: var(--primary); text-align: center; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: var(--bg);
+      border: 1px solid #e2e6ea;
+      border-radius: 8px;
+      padding: 24px;
+    }
+    .card h3 { margin-bottom: 8px; }
+
+    /* ===== Contact form ===== */
+    form { max-width: 600px; margin: 0 auto; display: grid; gap: 14px; }
+    input, textarea {
+      width: 100%; padding: 12px;
+      border: 1px solid #ccc; border-radius: 6px; font: inherit;
+    }
+    button { border: none; cursor: pointer; font: inherit; }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #111; color: #aaa;
+      text-align: center; padding: 24px 20px; font-size: 0.9rem;
+    }
+
+    /* ===== Mobile ===== */
+    @media (max-width: 700px) {
+      .nav { flex-direction: column; gap: 12px; }
+      .nav ul { gap: 16px; flex-wrap: wrap; justify-content: center; }
+      .hero h1 { font-size: 1.9rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <nav class="nav">
+      <a href="#" class="logo">YourBrand</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <div class="hero">
+    <h1>Your Headline Goes Here</h1>
+    <p>One sentence explaining what you do and who you help.</p>
+    <a href="#contact" class="btn">Get in Touch</a>
+  </div>
+
+  <main>
+    <!-- ===== ABOUT ===== -->
+    <section id="about">
+      <div class="container">
+        <h2>About</h2>
+        <p>Write a short paragraph about your company, mission, or background.</p>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section id="services" style="background: var(--bg-alt);">
+      <div class="container">
+        <h2>Services</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Service One</h3>
+            <p>Brief description of this service.</p>
+          </div>
+          <div class="card">
+            <h3>Service Two</h3>
+            <p>Brief description of this service.</p>
+          </div>
+          <div class="card">
+            <h3>Service Three</h3>
+            <p>Brief description of this service.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS ===== -->
+    <section id="projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Project A</h3>
+            <p>Scope, location, and outcome.</p>
+          </div>
+          <div class="card">
+            <h3>Project B</h3>
+            <p>Scope, location, and outcome.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" style="background: var(--bg-alt);">
+      <div class="container">
+        <h2>Contact</h2>
+        <!-- NOTE: form needs a backend or service (e.g. Formspree) to actually send -->
+        <form action="#" method="POST">
+          <input type="text" name="name" placeholder="Your name" required>
+          <input type="email" name="email" placeholder="Your email" required>
+          <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; <span id="year"></span> YourBrand. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Auto-updates the copyright year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
